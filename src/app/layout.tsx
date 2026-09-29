@@ -6,7 +6,6 @@ import "./globals.css";
 const bricolage = Bricolage_Grotesque({
   subsets: ["latin"],
   variable: "--font-bricolage",
-  axes: ["opsz"],
   display: "swap",
 });
 

@@ -9,7 +9,7 @@ export function Regions({ regions }: { regions: Region[] }) {
   const active = regions.find((region) => region.id === activeId) ?? regions[0];
 
   return (
-    <section id="regions" className="shell scroll-mt-28 py-16 md:py-28">
+    <section id="regions" className="render-lazy shell scroll-mt-28 py-16 md:py-28">
       <h2 className="reveal-text max-w-[18ch] text-[clamp(2rem,4.2vw,3.6rem)] font-semibold leading-[1.02] tracking-[-0.03em]">
         Every district of Uttar Pradesh
       </h2>

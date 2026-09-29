@@ -21,10 +21,10 @@ export function Hero() {
       {/* Rounded video frame, inset from the page edge. Scales back as the page scrolls. */}
       <div className="hero-frame absolute inset-2 -z-10 overflow-hidden rounded-3xl bg-ink md:inset-3 md:rounded-[2.25rem]">
         <HeroVideo poster={poster} />
-        {/* Golden-hour warmth over the river's grey morning sky. */}
+        {/* Golden-hour warmth over the river's grey morning sky (plain alpha, no blend mode). */}
         <div
           aria-hidden
-          className="absolute inset-0 hidden bg-[radial-gradient(120%_85%_at_85%_0%,rgba(233,162,59,0.35),transparent_60%)] mix-blend-soft-light md:block"
+          className="absolute inset-0 bg-[radial-gradient(120%_85%_at_85%_0%,rgba(233,162,59,0.16),transparent_60%)]"
         />
         <div aria-hidden className="absolute inset-0 bg-ink/25 md:hidden" />
         <div
@@ -36,11 +36,11 @@ export function Hero() {
           className="absolute inset-0 bg-[linear-gradient(90deg,rgba(14,27,43,0.6)_0%,rgba(14,27,43,0.2)_45%,rgba(14,27,43,0)_70%)]"
         />
 
-        {/* Outlined Devanagari mark in the open sky; drifts slower than the page (parallax). */}
-        <div aria-hidden className="hero-glyph pointer-events-none absolute left-[5%] top-[15%] select-none md:left-[4%] md:top-[13%]">
+        {/* Devanagari mark in the open sky; drifts slower than the page (parallax). Tablet and up: phones have no room above the copy. */}
+        <div aria-hidden className="hero-glyph pointer-events-none absolute left-[4%] top-[13%] hidden select-none md:block">
           <p
             lang="hi"
-            className="font-deva text-[clamp(6.5rem,15vw,16rem)] leading-none text-white/15 animate-fade md:text-white/20 md:mix-blend-overlay"
+            className="font-deva text-[clamp(6.5rem,15vw,16rem)] leading-none text-white/15 animate-fade"
             style={delay(250)}
           >
             काशी

@@ -16,7 +16,7 @@ const places: [hindi: string, english: string][] = [
 
 export function PlaceMarquee() {
   return (
-    <div aria-hidden className="overflow-hidden border-y border-line py-6 md:py-10">
+    <div aria-hidden className="render-lazy overflow-hidden border-y border-line py-6 md:py-10">
       <div className="flex w-max animate-marquee hover:[animation-play-state:paused]">
         {[0, 1].map((copy) => (
           <div key={copy} className="flex shrink-0 items-baseline gap-14 pr-14 md:gap-20 md:pr-20">

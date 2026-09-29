@@ -9,7 +9,7 @@ const linkClass = "text-paper/70 transition-colors hover:text-paper";
 
 export function SiteFooter() {
   return (
-    <footer className="overflow-hidden bg-ink text-paper">
+    <footer className="render-lazy overflow-hidden bg-ink text-paper">
       <div className="shell pb-8 pt-14 md:pt-16">
         <div className="grid grid-cols-2 gap-x-6 gap-y-12 lg:grid-cols-12">
           <div className="col-span-2 lg:col-span-5">

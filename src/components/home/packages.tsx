@@ -46,7 +46,7 @@ function PackageCard({ pkg }: { pkg: TourPackage }) {
 
 export function Packages({ packages }: { packages: TourPackage[] }) {
   return (
-    <section id="packages" className="scroll-mt-28 pb-16 md:pb-28 [timeline-scope:--rail]">
+    <section id="packages" className="render-lazy scroll-mt-28 pb-16 md:pb-28 [timeline-scope:--rail]">
       <div className="shell mb-8 flex flex-wrap items-end justify-between gap-6 md:mb-12">
         <div>
           <h2 className="reveal-text text-[clamp(2rem,4.2vw,3.6rem)] font-semibold leading-[1.02] tracking-[-0.03em]">Tour packages</h2>

@@ -25,6 +25,7 @@
   --animate-marquee: marquee 70s linear infinite;
   --animate-word: word 0.95s var(--ease-soft) both;
   --animate-progress: progress 5s linear both;
+  --animate-kenburns: kenburns 18s ease-in-out infinite alternate;
 
   @keyframes rise {
     from { transform: translateY(105%); }
@@ -46,6 +47,10 @@
     from { transform: scaleX(0); }
     to { transform: scaleX(1); }
   }
+  @keyframes kenburns {
+    from { transform: scale(1); }
+    to { transform: scale(1.08) translate(-1.5%, -1%); }
+  }
   @keyframes settle {
     from { transform: scale(1.08); }
     to { transform: scale(1); }
@@ -60,6 +65,15 @@
   padding-inline: 1rem;
   @media (width >= 40rem) { padding-inline: 1.5rem; }
   @media (width >= 64rem) { padding-inline: 2.5rem; }
+}
+
+/*
+  Below-the-fold sections: the browser skips their style, layout and paint until
+  they come near the viewport, and remembers their real height afterwards.
+*/
+@utility render-lazy {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 900px;
 }
 
 @utility no-scrollbar {
@@ -105,19 +119,6 @@ html.lenis body {
 }
 .lenis.lenis-smooth iframe {
   pointer-events: none;
-}
-
-/* Fine film grain for a printed, tactile finish. Desktop only, to keep phones light. */
-@media (width >= 48rem) {
-  body::after {
-    content: "";
-  position: fixed;
-  inset: 0;
-  z-index: 80;
-  pointer-events: none;
-  opacity: 0.06;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.9 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-  }
 }
 
 /*

@@ -8,7 +8,7 @@ import { EnquiryForm } from "./enquiry-form";
 
 export function Enquiry() {
   return (
-    <section id="plan" className="relative isolate scroll-mt-20 overflow-hidden">
+    <section id="plan" className="render-lazy relative isolate scroll-mt-20 overflow-hidden">
       <Image src={waterfront} alt="" fill placeholder="blur" sizes="100vw" className="-z-20 object-cover" />
       <div aria-hidden className="absolute inset-0 -z-10 bg-ink/75 lg:bg-transparent lg:bg-[linear-gradient(90deg,rgba(14,27,43,0.85)_0%,rgba(14,27,43,0.6)_55%,rgba(14,27,43,0.35)_100%)]" />
 

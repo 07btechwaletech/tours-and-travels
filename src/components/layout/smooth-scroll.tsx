@@ -15,7 +15,7 @@ export function SmoothScroll() {
     let cancelled = false;
     const start = () =>
       import("lenis").then(({ default: LenisClass }) => {
-        if (!cancelled) lenis = new LenisClass({ autoRaf: true, lerp: 0.09 });
+        if (!cancelled) lenis = new LenisClass({ autoRaf: true, lerp: 0.13 });
       });
     const idle = window.requestIdleCallback ? window.requestIdleCallback(start) : window.setTimeout(start, 1);
     return () => {

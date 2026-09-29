@@ -7,7 +7,7 @@ import { whatsappLink } from "@/lib/contact";
 
 export function Cabs() {
   return (
-    <section id="cabs" className="shell scroll-mt-28 pb-16 md:pb-28">
+    <section id="cabs" className="render-lazy shell scroll-mt-28 pb-16 md:pb-28">
       <div className="grid items-center gap-8 md:gap-10 lg:grid-cols-12 lg:gap-16">
         <div className="reveal-media rounded-[2rem] bg-ink/[0.04] p-1.5 ring-1 ring-ink/[0.06] lg:col-span-5">
           <div className="relative aspect-[16/9] overflow-hidden rounded-[calc(2rem-0.375rem)] sm:aspect-[4/3] lg:aspect-[4/5]">

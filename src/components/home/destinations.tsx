@@ -43,7 +43,7 @@ function DestinationTile({ destination, featured, className }: { destination: De
             <h3 className="text-[15px] font-semibold leading-tight tracking-tight sm:text-lg">{destination.name}</h3>
             <p className={`mt-0.5 text-sm text-white/75 ${featured ? "" : "hidden sm:block"}`}>{destination.highlights}</p>
           </div>
-          <span className="hidden size-10 shrink-0 items-center sm:flex justify-center rounded-full bg-white/15 backdrop-blur-sm transition-colors duration-500 ease-soft group-hover:bg-marigold group-hover:text-ink">
+          <span className="hidden size-10 shrink-0 items-center sm:flex justify-center rounded-full bg-white/20 transition-colors duration-500 ease-soft group-hover:bg-marigold group-hover:text-ink">
             <ArrowUpRightIcon size={18} weight="light" aria-hidden />
           </span>
         </div>
@@ -54,7 +54,7 @@ function DestinationTile({ destination, featured, className }: { destination: De
 
 export function Destinations() {
   return (
-    <section id="destinations" className="shell scroll-mt-28 py-16 md:py-28">
+    <section id="destinations" className="render-lazy shell scroll-mt-28 py-16 md:py-28">
       <div className="mb-8 flex flex-wrap items-end justify-between gap-4 md:mb-12 md:gap-6">
         <h2 className="reveal-text max-w-[17ch] text-[clamp(2rem,4.2vw,3.6rem)] font-semibold leading-[1.02] tracking-[-0.03em]">
           The places people ask us about first

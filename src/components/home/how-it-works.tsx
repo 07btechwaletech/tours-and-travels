@@ -22,7 +22,7 @@ const numerals = ["१", "२", "३"];
 
 export function HowItWorks() {
   return (
-    <section className="bg-ink text-paper">
+    <section className="render-lazy bg-ink text-paper">
       <div className="shell grid gap-10 py-16 md:gap-12 md:py-28 lg:grid-cols-12 lg:gap-16">
         <div className="flex flex-col lg:col-span-5">
           <h2 className="reveal-text max-w-[14ch] text-[clamp(2rem,4.2vw,3.6rem)] font-semibold leading-[1.02] tracking-[-0.03em]">

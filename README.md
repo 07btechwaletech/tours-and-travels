@@ -1,36 +1,43 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Anup Tours & Travels website
 
-## Getting Started
-
-First, run the development server:
+Next.js 16 (App Router) + Tailwind CSS v4. PostgreSQL and the admin panel (CMS) come next.
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run dev     # http://localhost:3000
+npm run build   # production build
+npm run lint
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Structure
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+src/
+  app/
+    layout.tsx            fonts, metadata, <html>
+    globals.css           design tokens (colors, fonts, easing) + scroll animations
+    (site)/               public website: header, footer, smooth scroll
+      page.tsx            homepage (sections below, plus TravelAgency schema)
+  components/
+    home/                 one file per homepage section
+    layout/               site header, footer, smooth scroll
+    ui/                   shared pieces (ButtonLink, Brand)
+  content/                all site text and data (swap for Postgres queries when the CMS lands)
+    site.ts               name, phone, WhatsApp, email, nav
+    destinations.ts       featured destinations (homepage grid)
+    packages.ts           tour packages
+    fleet.ts              cab types and per-km rates
+    regions.ts            UP regions and places (links to /destinations/[slug])
+  lib/contact.ts          WhatsApp link, phone link, INR formatting
+  assets/images/          photos (Pexels licence, free for commercial use)
+public/video/             hero video: 720p (phones), 1080p (laptops), 4K (large and retina screens)
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Before launch
 
-## Learn More
+Search the code for `TODO(client)`:
 
-To learn more about Next.js, take a look at the following resources:
+- `content/site.ts`: real phone, WhatsApp number and email
+- `content/packages.ts`: real package prices
+- `content/fleet.ts`: real per-km cab rates
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The `/destinations/[slug]` links are ready for the SEO location pages.
